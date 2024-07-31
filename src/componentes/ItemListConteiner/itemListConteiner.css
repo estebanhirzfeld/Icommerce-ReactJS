@@ -1,0 +1,10 @@
+.subtitulo{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    font-size: 20px;
+    top: 120px;
+    right: 75vh;
+    color: aqua;
+}
