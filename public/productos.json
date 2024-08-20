@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "nombre": "Notebook Noblex N14 14 FHD i3-1115G4 8GB 256GB SSD Win11",
+        "precio": 439000,
+        "stock": 20,
+        "category": "Notebooks",
+        "img": "https://images.fravega.com/f1000/123141902bf67f3e71f133bd8dad80b8.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Procesador AMD RYZEN 5 3600 4.2GHz Turbo AM4 Wraith Stealth Cooler",
+        "precio": 130000,
+        "stock": 20,
+        "category": "Procesadores",
+        "img": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_16749_Procesador_AMD_RYZEN_5_3600_4.2GHz_Turbo_AM4_Wraith_Stealth_Cooler_f8ab4915-grn.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Mother Asrock B450M-HDV 4.0 AM4 HDMI M.2",
+        "precio": 75850,
+        "stock": 20,
+        "category": "Mothers",
+        "img": "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_13643_Mother_Asrock_B450M-HDV_4.0_AM4_HDMI_M.2__31247782-grn.jpg"
+    }
+
+]

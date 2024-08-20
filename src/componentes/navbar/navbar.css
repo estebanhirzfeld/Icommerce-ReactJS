@@ -1,31 +1,30 @@
-.header{
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    background-color: cadetblue;
-}
-
-.Logo{
-    font-size: 26px;
-    color: aquamarine;
-}
-
 .navbar{
-    list-style: none;
-    display: flex;
-    gap: 35px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: darkcyan;
+   padding: 10px 20px;
 }
 
-.navbar li a{
-    font-size: 18px;
+.navbar-logo{
+    color: aquamarine;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.navbar-links ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.navbar-links ul a{
     text-decoration: none;
     color: aquamarine;
+    font-size: 18px;
 }
 
 .contador{
     color: aquamarine;
-    font-size: 16px;
+    font-size: 18px;
 }
-
