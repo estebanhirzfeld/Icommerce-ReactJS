@@ -1,45 +1,32 @@
-import { useState, useEffect} from "react"
-import ItemList from "../ItemList/itemList"
-import { useParams } from "react-router-dom"
+import { useState, useEffect } from "react"
 import './itemListConteiner.css'
+import ItemList from "../ItemList/itemList"
 
 
-const ItemListConteiner = ({greeting}) => {
-  
-      const [products, setProducts] = useState([])
+const ItemListConteiner = ({ greeting }) => {
 
-      const {categoryId} = useParams();
+  const [product, setProducts] = useState([])
 
-      useEffect(() => {
-        const fetchData = async () => {
-          try{
-            const response = await fetch('/productos.json')
-            const data = await response.json()
-            setProducts(data)
-          }catch(error){
-            console.log(error)
-          }
-        }
+    useEffect(() => {
 
-        fetchData()
-      }, [])
-
-      console.log(categoryId);
+      const fetchData = async () => {
+       try{
+          const response = await fetch('/productos.json')
+          const data = await response.json()
+          setProducts(data)
+       }catch(error){
+        console.log(error)
+       }
+      }
+    fetchData()
+    },[])
 
   return (
     <div className="conteiner">
-      <h2>{greeting}</h2>
 
-      {products.map((product) => {
-        return(
-          <div className="conteiner">
-                 
-              <h1>{greeting}</h1>
+      <h1>{greeting}</h1>
 
-              <ItemList key={product.id} product={products}/>
-          </div>
-        )
-      })}
+      <ItemList product={product}/>
 
     </div>
   )
