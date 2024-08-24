@@ -4,23 +4,21 @@ const ContadorRef = () => {
 
     const [count, setCount] = useState(0);
 
-    const refCount = useRef(0);
-
     const handleIncrement = () => {
        setCount(count + 1);
     }
 
-    const hanldeSaveRef = () => {
-      refCount.current = count;
-      console.log(`El ultimo valor guardado es: ${refCount.current}`)
+    const hanldeDecrement = () => {
+      if(count > 1){
+        setCount(count - 1)
+      }
     }
 
   return (
     <div>
+        <button onClick={handleIncrement}>+</button>
         <h1>Contador: {count}</h1>
-
-        <button onClick={handleIncrement}>Incrementar</button>
-        <button onClick={hanldeSaveRef}>Guardar</button>
+        <button onClick={hanldeDecrement}>-</button>
     </div>
   )
 }
