@@ -1,7 +1,6 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Error = () => {
+export const Error = () => {
   return (
     <div>
         <h1>¡Error 404, la pagina no a sido encontrada!</h1>
@@ -11,4 +10,3 @@ const Error = () => {
   )
 }
 
-export default Error

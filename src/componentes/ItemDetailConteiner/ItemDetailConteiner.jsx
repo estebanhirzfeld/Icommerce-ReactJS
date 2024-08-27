@@ -1,33 +1,31 @@
-import { useState, useEffect } from "react"
-import ItemDetail from "../ItemDetail/ItemDetail"
-import Spinner from "../spinner/Spinner"
-import { useParams } from "react-router-dom"
+import { useState, useEffect } from "react";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import Spinner from "../spinner/Spinner";
+import { useParams } from "react-router-dom";
 
-const ItemDetailConteiner = () => {
-    const [product, setProduct] = useState("")
+export const ItemDetailConteiner = () => {
+  const [product, setProduct] = useState("");
 
-    const {id} = useParams();
+  const { id } = useParams();
 
-    useEffect(() => {
-        const fetchData = async () => {
-          try{
-            const response = await fetch('/productos.json')
-            const data = await response.json()
-            const newProduct = data.find(product => product.id === Number(id))
-            setProduct(newProduct)
-          }catch(error){
-            console.log(error)
-          }
-        }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/productos.json");
+        const data = await response.json();
+        const newProduct = data.find((product) => product.id === Number(id));
+        setProduct(newProduct);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-        fetchData()
-      }, [id])
+    fetchData();
+  }, [id]);
 
   return (
-       <div>
-        {product == undefined ? <Spinner/> : <ItemDetail product={product}/>}
-       </div>
-  )
-}
-
-export default ItemDetailConteiner
+    <div>
+      {product == undefined ? <Spinner /> : <ItemDetail product={product} />}
+    </div>
+  );
+};
